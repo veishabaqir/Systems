@@ -1,5 +1,22 @@
 from datetime import datetime, timedelta
 
+class Library:
+    def __init__(self):
+        self.books = []
+        self.users = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def add_user(self, user):
+        self.users.append(user)
+
+    def list_books(self):
+        return [str(book) for book in self.books]
+
+    def list_users(self):
+        return [str(user) for user in self.users]
+
 class Book:
     def __init__(self, title, author, isbn):
         self.title = title
